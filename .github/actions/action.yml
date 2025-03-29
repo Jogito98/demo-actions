@@ -17,7 +17,7 @@ inputs:
         with:
           python-version: "3.10"
       - name: Pass Inputs to Shell
-        run: |
+        run: 
           echo "INPUT_VAL=${{inputs.valor}}" >>$GITHUB_ENV
         shell: bash
       - name: Get result
