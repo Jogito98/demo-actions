@@ -1,8 +1,9 @@
+---
 name: Test actions
-on: [push]
-
+on:
+  - push
 jobs:
-  get-result:
+  get-result: null
   runs-on: ubuntu-latest
   name: Greet the user in python
   steps:
@@ -12,6 +13,6 @@ jobs:
       id: get_value
       uses: ./.github/actions/
       with:
-        valor: "Alice"
+        valor: Alice
     - name: Print result
       run: echo "${{ steps.get_value.outputs.result }}"
